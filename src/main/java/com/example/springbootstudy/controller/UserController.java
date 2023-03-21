@@ -1,10 +1,13 @@
 package com.example.springbootstudy.controller;
 
 import com.example.springbootstudy.entity.User;
+import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
 public class UserController {
+
+    @ApiResponse(description = "获取用户信息")
     @GetMapping("/user/{id}")
     public String getUserById(@PathVariable int id){
         System.out.println(id);
