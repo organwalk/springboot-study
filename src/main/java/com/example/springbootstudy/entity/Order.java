@@ -1,6 +1,7 @@
 package com.example.springbootstudy.entity;
 
 import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 
@@ -10,7 +11,8 @@ public class Order {
     private int id;
     private String order_time;
     private int total;
-    private int uid;
+    @TableField(exist = false)
+    private User user;
 
     public int getId() {
         return id;
@@ -36,12 +38,12 @@ public class Order {
         this.total = total;
     }
 
-    public int getUid() {
-        return uid;
+    public User getUser() {
+        return user;
     }
 
-    public void setUid(int uid) {
-        this.uid = uid;
+    public void setUser(User user) {
+        this.user = user;
     }
 
     @Override
@@ -50,7 +52,7 @@ public class Order {
                 "id=" + id +
                 ", order_time='" + order_time + '\'' +
                 ", total=" + total +
-                ", uid=" + uid +
+                ", user=" + user +
                 '}';
     }
 }
