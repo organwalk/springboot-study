@@ -12,7 +12,7 @@ public class User {
     private String username;
     private String password;
     private String birthday;
-    @TableField(exist = false)
+    @TableField(exist = false)//该属性并不是表中真实存在的字段
     private List<Order> orders;
 
     public int getId() {
@@ -47,6 +47,14 @@ public class User {
         this.password = password;
     }
 
+    public List<Order> getOrders() {
+        return orders;
+    }
+
+    public void setOrders(List<Order> orders) {
+        this.orders = orders;
+    }
+
     @Override
     public String toString() {
         return "User{" +
@@ -54,6 +62,7 @@ public class User {
                 ", username='" + username + '\'' +
                 ", password='" + password + '\'' +
                 ", birthday='" + birthday + '\'' +
+                ", orders=" + orders +
                 '}';
     }
 }

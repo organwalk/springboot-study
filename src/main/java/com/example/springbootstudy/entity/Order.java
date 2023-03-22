@@ -10,7 +10,7 @@ public class Order {
     @TableId(type = IdType.AUTO)
     private int id;
     private String order_time;
-    private int total;
+    private double total;
     @TableField(exist = false)
     private User user;
 
@@ -30,11 +30,11 @@ public class Order {
         this.order_time = order_time;
     }
 
-    public int getTotal() {
+    public double getTotal() {
         return total;
     }
 
-    public void setTotal(int total) {
+    public void setTotal(double total) {
         this.total = total;
     }
 
