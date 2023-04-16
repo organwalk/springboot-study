@@ -1,5 +1,3 @@
-[[toc]]
-
 # SpringBoot学习笔记
 
 基于SpringBoot 3.X 版本学习，但仍然有2.x版本的操作
